@@ -1,0 +1,15 @@
+<div class="pagination">
+    <template v-if="currentPage > 2">
+        <div class="pagination__item" @click="gotoPage(1)">1</div>
+        <div>...</div>
+    </template>
+
+    <div v-show="currentPage > 1" class="pagination__item" @click="gotoPage(currentPage - 1)">{{currentPage - 1}}</div>
+    <div class="pagination__item active" :class="{'active' : item === currentPage}">{{currentPage}}</div>
+    <div v-show="currentPage < pageCount" class="pagination__item"  @click="gotoPage(currentPage + 1)">{{currentPage + 1}}</div>
+
+    <template v-if="currentPage < pageCount - 1">
+        <div>...</div>
+        <div @click="gotoPage(pageCount)" :class="{'active' : pageCount === currentPage}" class="pagination__item">{{pageCount}}</div>
+    </template>
+</div>

@@ -1,0 +1,16 @@
+.content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    max-height: 100vh;
+    overflow: hidden;
+
+    &__sidebar {
+        padding: 20px;
+    }
+
+    &__main {
+        padding: 20px;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}

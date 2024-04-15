@@ -1,0 +1,15 @@
+<div class="games">
+    <div class="games-container">
+        <card v-for="game of games" 
+            :id="game.id" 
+            :title="game.attributes.title"
+            :image="game.attributes.image"
+            @onClickCard="getCame"/>
+    </div>
+    <pagination v-if="paginationData"
+        :totalCount="paginationData['total-count']" 
+        :pageCount="paginationData['page-count']"
+        :currentPage="paginationData['current-page']"
+        :perPage="paginationData['per-page']"
+        @pageChanged="handlePageChange"/>
+</div>

@@ -1,0 +1,76 @@
+.balance {
+    padding: 50px 20px;
+    border-radius: 7px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.123), 5px 5px 10px rgba(3, 3, 3, 0.356);
+
+    .balance-shadow {
+        padding: 10px 5px;
+        border-radius: 7px;
+        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.123), 5px 5px 10px rgba(3, 3, 3, 0.356);
+
+        .balance-user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+
+            &__close {
+                padding: 3px;
+                box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.705), 3px 3px 5px rgba(3, 3, 3, 0.678);
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                &-icon {
+                    width: 10px;
+                    height: 10px;
+                    background-color: $mainYellow;
+                    border-radius: 50%;
+                }
+            }
+
+            &__avatar {
+                padding: 15px;
+                margin: 30px 0px 10px;
+                border-radius: 50%;
+                box-shadow: inset -7px -7px 7px rgba(255, 255, 255, 0.137), inset 15px 15px 15px rgba(0, 0, 0, 0.288);
+                &-icon {
+                    width: 70px;
+                    height: 70px;
+                    padding: 10px;
+                    background-color: $mainYellow;
+                    border-radius: 50%;
+                }
+            }
+
+            &__name {
+                color: $white;
+                font-size: 30px;
+            }
+        }
+
+        .balance-counter {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: inset -7px -7px 7px rgba(255, 255, 255, 0.137), inset 15px 15px 15px rgba(0, 0, 0, 0.288);
+
+            &__item {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                &-title {
+                    color: $white;
+                }
+                &-count {
+                    color: $white;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

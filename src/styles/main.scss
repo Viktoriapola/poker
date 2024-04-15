@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: 0;
+  border: none;
+}
+
+.common-btn {
+  background-color: $mainYellow;
+  border: 0 !important;
+  padding: 10px 50px;
+  border-radius: 7px;
+  color: $black;
+  cursor: pointer;
+  box-shadow: 9px 15px 47px -60px rgba(7, 7, 7, 0.39);
+  &:hover {
+    background-color: $mainYellowHover;
+  }
+}
+
+.common-btn.disabled {
+  pointer-events: none;
+  opacity: 20%;
+}
+
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: $white;
+    margin-bottom: 10px;
+  }
+  &__input {
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 5px;
+    &:focus {
+      border: 1px solid $mainYellow;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="balance">
+    <div class="balance-shadow">
+        <div class="balance-user">
+            <div class="balance-user__close">
+                <div class="balance-user__close-icon"></div>
+            </div>
+            <div class="balance-user__avatar">
+                <div class="balance-user__avatar-icon">
+                    <img :src="user" alt="#">
+                </div>
+            </div>
+            <div class="balance-user__name">{{balance.currency}}</div>
+        </div>
+        <div class="balance-counter">
+            <div class="balance-counter__item">
+                <div class="balance-counter__item-title">available</div>
+                <div class="balance-counter__item-count">{{balance.available}}</div>
+            </div>
+            <div class="balance-counter__item">
+                <div class="balance-counter__item-title">bonus</div>
+                <div class="balance-counter__item-count">{{balance.bonus}}</div>
+            </div>
+            <div class="balance-counter__item">
+                <div class="balance-counter__item-title">in-play</div>
+                <div class="balance-counter__item-count">{{balance['in-play']}}</div>
+            </div>
+        </div>
+    </div>
+</div>
